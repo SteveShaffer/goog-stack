@@ -4,10 +4,10 @@
         .module('app.route', [
             'ngRoute'
         ])
-        .config(rootRoutes);
+        .config(setRoutes);
 
-    function rootRoutes($routeProvider) {
-        // TODO: html5mode?
+    function setRoutes($routeProvider, $locationProvider) {
+        $locationProvider.html5Mode(true);
         $routeProvider.otherwise({redirectTo: '/home'});
     }
 

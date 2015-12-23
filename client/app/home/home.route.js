@@ -1,13 +1,18 @@
 (function () {
     "use strict";
     angular
-        .module('home.route', [  // TODO: Make home module
+        .module('home.route', [
             'ngRoute'
         ])
         .config(setRoutes);
 
     function setRoutes($routeProvider) {
-        // TODO: Define home route
+        $routeProvider
+            .when('/home/', {
+                controller: 'HomeController',
+                controllerAs: 'vm',
+                templateUrl: 'app/home/home.tpl.html'
+            });
     }
 
 })();

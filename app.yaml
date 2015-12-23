@@ -5,12 +5,16 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /client/
+
+- url: /client/app
+  static_dir: client/app
+
+- url: /client/vendor
+  static_dir: client/vendor
+
+- url: /client/.*
   static_files: client/index.html
   upload: client/index\.html
-
-- url: /client
-  static_dir: client
 
 - url: /favicon\.ico
   static_files: favicon.ico

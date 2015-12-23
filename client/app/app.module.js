@@ -3,6 +3,9 @@
     angular
         .module('googStack', [
             'app.route',
+
+            'home',
+
             'ngMaterial'
         ]);
 

@@ -8,7 +8,7 @@
 * Explain once-and-for-all the best-practice node/npm/nvm install method
 * Consider using CDN in production?
 * Include jQuery?
-* /client/ requires the trailing slash
+* I'm using trailing slashes to satisfy the browser when I use relative paths but we should probably try not to?
 * John Papa says to put vendor files outside the client folder
 * John Papa says to use UI Router
 * Consider using .route.js
