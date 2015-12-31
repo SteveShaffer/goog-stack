@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <base href="/client/"><!--TODO: Using / as base.  Should use sub-app?-->
 
     <title>Hello World</title>
@@ -16,28 +16,38 @@
 
     <style type="text/css">
         [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-          display: none !important;
+            display: none !important;
         }
     </style>
 
     <script src="vendor/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body ng-app="googStack">
+<body ng-app="googStack" layout="row">
 
-    <div ng-view></div>
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')">
+    <md-toolbar>
+        <h1>Stuff</h1>
+    </md-toolbar>
+    <md-list>
+        <md-list-item>
+            Thing
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+<div flex layout="column" tabindex="-1" role="main" ng-view></div>
 
-    <!--Scripts-->
-    <script type="text/javascript" src="vendor/angular/angular.js"></script>
-    <script type="text/javascript" src="vendor/angular-route/angular-route.js"></script>
-    <script type="text/javascript" src="vendor/angular-animate/angular-animate.js"></script>
-    <script type="text/javascript" src="vendor/angular-aria/angular-aria.js"></script>
-    <script type="text/javascript" src="vendor/angular-material/angular-material.js"></script>
+<!--Scripts-->
+<script type="text/javascript" src="vendor/angular/angular.js"></script>
+<script type="text/javascript" src="vendor/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="vendor/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="vendor/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="vendor/angular-material/angular-material.js"></script>
 
-    <script type="text/javascript" src="app/app.module.js"></script>
-    <script type="text/javascript" src="app/app.route.js"></script>
-    <script type="text/javascript" src="app/home/home.module.js"></script>
-    <script type="text/javascript" src="app/home/home.route.js"></script>
-    <script type="text/javascript" src="app/home/home.controller.js"></script>
+<script type="text/javascript" src="app/app.module.js"></script>
+<script type="text/javascript" src="app/app.route.js"></script>
+<script type="text/javascript" src="app/home/home.module.js"></script>
+<script type="text/javascript" src="app/home/home.route.js"></script>
+<script type="text/javascript" src="app/home/home.controller.js"></script>
 
 </body>
 </html>
