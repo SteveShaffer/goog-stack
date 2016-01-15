@@ -4,7 +4,9 @@
         .module('home.controller', [])
         .controller('HomeController', Controller);
 
-    function Controller () {
+    function Controller ($route) {
+        var vm = this;
+        vm.routes = $route.routes;
     }
 
 })();

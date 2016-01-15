@@ -5,8 +5,10 @@
             'app.route',
 
             'home',
+            'record',
 
-            'ngMaterial'
+            'ngMaterial',
+            'ngResource'
         ]);
 
 })();
