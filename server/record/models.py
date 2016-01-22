@@ -15,11 +15,10 @@ class Record(models.BaseModel):
     def api_read(cls, record_type, record_id):
         return cls.get_by_type_and_id(record_type, record_id).api_message()
 
-    def api_message(self):
-        return {
-            'type': self.key.parent().id(),
-            'id': self.key.id()
-        }
+    def api_message(self, *args, **kwargs):
+        data = super(Record, self).api_message(*args, **kwargs)
+        data['type'] = self.key.parent().id()
+        return data
 
     @classmethod
     def get_by_type_and_id(cls, record_type, record_id):
