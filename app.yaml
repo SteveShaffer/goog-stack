@@ -21,7 +21,7 @@ handlers:
   upload: favicon\.ico
 
 - url: /api/records/.*  # TODO: Make api.py?
-  script: server.record.handler.app  # TODO: Better naming convention?  handler is weird?
+  script: server.record.handlers.app  # TODO: Better naming convention?  handler is weird?
 
 - url: .*
   script: server.main.app
