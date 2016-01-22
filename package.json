@@ -19,7 +19,7 @@
     "postinstall": "bower install",
 
     "prestart": "npm install",
-    "start": "dev_appserver.py",
+    "start": "dev_appserver.py .",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

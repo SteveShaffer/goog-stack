@@ -13,11 +13,11 @@ A best practices implementation of a web app built with Google's technologies
 
 * [GAE Python SDK](http://developers.google.com/appengine/downloads)
 * node + npm
-* bower (npm install -g bower)
+* GAE Python SDK on $PATH (export $PATH=$HOME/path_to/google_appengine:$PATH)
 
 # Startup
 
-    dev_appserver.py .
+    npm start
 
 # Been Done Before
 
